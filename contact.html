@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Three Gems Garage</title>
+<meta name="description" content="Request a free ceramic coating quote from Three Gems Garage in Randallstown, MD. Serving Baltimore and surrounding areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">Three Gems Garage</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <span class="eyebrow">Get In Touch</span>
+  <h1>Request Your Free Quote</h1>
+  <p>Tell us about your vehicle and we'll get back to you within one business day with a personalized ceramic coating quote.</p>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-info">
+        <div class="row">
+          <h4>Location</h4>
+          <p>10220 Liberty Road<br>Randallstown, MD 21133</p>
+        </div>
+        <div class="row">
+          <h4>Phone</h4>
+          <p><a href="tel:+14434727691">(443) 472-7691</a></p>
+        </div>
+        <div class="row">
+          <h4>Email</h4>
+          <p><a href="mailto:threegemsgarage@gmail.com">threegemsgarage@gmail.com</a></p>
+        </div>
+        <div class="row">
+          <h4>Hours</h4>
+          <p>Mon–Fri: 9am – 6pm<br>Sat: 10am – 4pm · Sun: Closed</p>
+        </div>
+        <div class="map">
+          <iframe title="Three Gems Garage location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=10220%20Liberty%20Road%2C%20Randallstown%2C%20MD%2021133&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+
+      <form class="quote" id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+        <h3>Tell us about your vehicle</h3>
+        <p class="sub">We'll respond within 1 business day.</p>
+        <input type="hidden" name="access_key" value="d66909a3-4ef5-4412-8d11-db4c26120eeb">
+        <input type="hidden" name="subject" value="New Quote Request — Three Gems Garage (Classic)">
+        <input type="hidden" name="from_name" value="Three Gems Garage Website">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+        <div class="row-2">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required placeholder="Your name"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required placeholder="(443) 000-0000"></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@email.com"></div>
+        <div class="row-2">
+          <div class="field"><label for="vehicle">Vehicle (year / make / model)</label><input id="vehicle" name="vehicle" type="text" placeholder="2022 Honda Accord"></div>
+          <div class="field"><label for="package">Package</label>
+            <select id="package" name="package">
+              <option>Not sure yet</option>
+              <option>Sapphire — Spray-on (up to 12 months)</option>
+              <option>Emerald — Paint correction + ceramic (up to 4 years)</option>
+              <option>Diamond — Two-layer ceramic (5 years)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="message">Details</label><textarea id="message" name="message" placeholder="Tell us about your vehicle's condition or any questions."></textarea></div>
+        <button type="submit" class="btn btn-solid" id="quoteSubmit">Request My Free Quote</button>
+        <p class="form-status" id="quoteStatus" role="status" aria-live="polite"></p>
+        <p class="form-note">Prefer to talk? Call us at <a href="tel:+14434727691">(443) 472-7691</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Three Gems Garage</div>
+      <p>Family-owned ceramic coating specialists serving Baltimore &amp; surrounding areas — based in Randallstown, MD.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+14434727691">(443) 472-7691</a></li>
+        <li><a href="mailto:threegemsgarage@gmail.com">threegemsgarage@gmail.com</a></li>
+        <li>10220 Liberty Road</li>
+        <li>Randallstown, MD 21133</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year"></span> Three Gems Garage</span>
+    <span>Ceramic Coating · Paint Protection · Baltimore, MD</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+  document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  const qForm=document.getElementById('quoteForm');
+  const status=document.getElementById('quoteStatus');
+  const btn=document.getElementById('quoteSubmit');
+  const orig=btn.textContent;
+  qForm.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const data=Object.fromEntries(new FormData(qForm));
+    btn.disabled=true;btn.textContent='Sending…';status.className='form-status';
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+      const out=await res.json();
+      if(out.success){
+        qForm.reset();
+        status.textContent='✓ Thanks! Your request was sent — we will be in touch within 1 business day.';
+        status.className='form-status show ok';btn.textContent='Request Sent';
+      }else{
+        status.textContent='Something went wrong. Please call us at (443) 472-7691.';
+        status.className='form-status show err';btn.disabled=false;btn.textContent=orig;
+      }
+    }catch(err){
+      status.textContent='Network error. Please call us at (443) 472-7691.';
+      status.className='form-status show err';btn.disabled=false;btn.textContent=orig;
+    }
+  });
+</script>
+</body>
+</html>

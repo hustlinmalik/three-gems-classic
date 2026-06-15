@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Three Gems Garage</title>
+<meta name="description" content="See the transformation: before and after ceramic coating work by Three Gems Garage in Baltimore, MD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">Three Gems Garage</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <span class="eyebrow">Our Work</span>
+  <h1>Gallery</h1>
+  <p>A look at the depth, gloss, and protection we deliver. More project photos coming soon.</p>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="ba">
+      <figure><img src="charger-before.jpg" alt="Dodge Charger before ceramic coating — dull, hazy black paint" loading="lazy"><figcaption>Before</figcaption></figure>
+      <figure><img src="charger-after.jpg" alt="Dodge Charger after ceramic coating — deep, glossy mirror-like black finish" loading="lazy"><figcaption>After</figcaption></figure>
+    </div>
+    <p class="ba-cap">Dodge Charger · two-step paint correction + two-layer ceramic coating (Diamond package)</p>
+
+    <div class="tiles">
+      <div class="tile">Coming Soon</div>
+      <div class="tile">Coming Soon</div>
+      <div class="tile">Coming Soon</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Want results like these?</h2>
+  <p>Book your ceramic coating and give your vehicle the protection it deserves.</p>
+  <a href="contact.html" class="btn btn-solid">Request a Free Quote</a>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Three Gems Garage</div>
+      <p>Family-owned ceramic coating specialists serving Baltimore &amp; surrounding areas — based in Randallstown, MD.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+14434727691">(443) 472-7691</a></li>
+        <li><a href="mailto:threegemsgarage@gmail.com">threegemsgarage@gmail.com</a></li>
+        <li>10220 Liberty Road</li>
+        <li>Randallstown, MD 21133</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year"></span> Three Gems Garage</span>
+    <span>Ceramic Coating · Paint Protection · Baltimore, MD</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+  document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

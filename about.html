@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Three Gems Garage</title>
+<meta name="description" content="Three Gems Garage is a family-owned ceramic coating studio in Randallstown, MD. Built on Family. Driven by Excellence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">Three Gems Garage</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <span class="eyebrow">About Three Gems Garage</span>
+  <h1>Built on Family.<br>Driven by Excellence.</h1>
+  <p>A family-owned detailing studio in Randallstown, Maryland, founded on a simple belief: every vehicle deserves to be treated like a gem.</p>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Our Story</span>
+        <h2 style="font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:500;color:#cdc9bf;margin:16px 0 20px;line-height:1.08">Specialists, not generalists</h2>
+        <p class="lead">We specialize exclusively in ceramic coatings, pouring our full attention into doing one thing exceptionally well.</p>
+        <p>From careful surface prep to precise application, we treat every car as if it were our own — because to us, your trust is everything. Honest advice, fair quotes, and work we're proud to put our name on.</p>
+        <a href="contact.html" class="btn btn-solid" style="margin-top:24px">Book Your Coating</a>
+      </div>
+      <div class="values">
+        <div class="value"><span class="num">01</span><div><h4>Specialists, not generalists</h4><p>Ceramic coating is our craft and our focus — every job gets expert care.</p></div></div>
+        <div class="value"><span class="num">02</span><div><h4>Meticulous prep</h4><p>Coatings are only as good as the prep beneath. We never cut corners.</p></div></div>
+        <div class="value"><span class="num">03</span><div><h4>Family values</h4><p>Honest advice, fair quotes, and work we're proud to put our name on.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Let's protect your vehicle</h2>
+  <p>Serving Baltimore &amp; surrounding areas — based in Randallstown, MD.</p>
+  <a href="contact.html" class="btn btn-solid">Request a Free Quote</a>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Three Gems Garage</div>
+      <p>Family-owned ceramic coating specialists serving Baltimore &amp; surrounding areas — based in Randallstown, MD.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+14434727691">(443) 472-7691</a></li>
+        <li><a href="mailto:threegemsgarage@gmail.com">threegemsgarage@gmail.com</a></li>
+        <li>10220 Liberty Road</li>
+        <li>Randallstown, MD 21133</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year"></span> Three Gems Garage</span>
+    <span>Ceramic Coating · Paint Protection · Baltimore, MD</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+  document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
