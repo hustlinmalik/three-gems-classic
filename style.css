@@ -19,7 +19,7 @@ img{max-width:100%;display:block}
 h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:.98;letter-spacing:.01em;text-transform:uppercase}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 
-.squiggle{display:block;width:230px;max-width:60%;height:16px;margin-top:14px}
+.squiggle{display:none}
 .squiggle path{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round}
 .on-dark .squiggle path,.squiggle.light path{stroke:var(--paper)}
 .divider{line-height:0}
@@ -39,11 +39,8 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:.98;letter-spaci
 .announce .x{position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.7;cursor:pointer}
 
 header{background:var(--dark);position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 28px;border-bottom:3px solid var(--line)}
-.brand{display:flex;align-items:center;gap:13px}
-.logo-mark{width:52px;height:28px;color:var(--paper);flex-shrink:0}
-.logo-word{display:flex;flex-direction:column;line-height:1}
-.lw1{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1.06rem;color:var(--paper)}
-.lw2{font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:.56rem;color:var(--muted);margin-top:4px}
+.brand{display:flex;align-items:center}
+.brand-logo{height:52px;width:auto;display:block}
 nav.desktop{display:flex;gap:26px}
 nav.desktop a{font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:.92rem;color:var(--light);transition:.2s}
 nav.desktop a:hover,nav.desktop a.active{color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--taupe)}
@@ -113,23 +110,33 @@ nav.desktop a:hover,nav.desktop a.active{color:#fff;text-decoration:underline;te
 .dark .feature p,.dark2 .feature p{color:var(--light)}
 
 /* packages cards */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:var(--cream);color:var(--ink);border:4px solid var(--ink);border-radius:20px;padding:30px 26px;box-shadow:10px 10px 0 rgba(0,0,0,.35);display:flex;flex-direction:column}
-.card .gem{width:18px;height:18px;border-radius:5px;transform:rotate(45deg);margin-bottom:14px}
-.card h3{font-size:1.7rem}
-.card .sub{font-family:var(--body);font-weight:500;color:#595959;font-size:.92rem;margin:4px 0 16px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+#packages .wrap{max-width:1340px}
+.card{background:var(--cream);color:var(--ink);border:4px solid var(--ink);border-radius:24px;padding:54px 42px;box-shadow:12px 12px 0 rgba(0,0,0,.35);display:flex;flex-direction:column}
+.card .gem{display:none}
+.card h3{font-size:3rem;text-align:center}
+.card .sub{font-family:var(--body);font-weight:500;color:#2b2b2b;font-size:1rem;margin:10px 0 26px;text-align:center}
 .card .price{font-family:var(--disp);font-weight:700;font-size:1.5rem;text-transform:uppercase}
-.card .price small{font-family:var(--body);font-weight:500;font-size:.8rem;color:#595959;text-transform:none}
-.card ul{list-style:none;margin:18px 0 22px;display:flex;flex-direction:column;gap:9px}
-.card li{font-size:.94rem;color:#3d3d3d;padding-left:20px;position:relative}
-.card li::before{content:"✦";position:absolute;left:0;color:var(--muted)}
-.card .ptiers{border-top:2px solid var(--ink);padding-top:14px;margin-bottom:18px;display:flex;flex-direction:column;gap:7px}
-.card .ptiers .pr{display:flex;justify-content:space-between;font-size:.86rem;color:#3d3d3d}
+.card .price small{font-family:var(--body);font-weight:500;font-size:.8rem;color:#444444;text-transform:none}
+.card ul{list-style:none;margin:24px 0 30px;display:flex;flex-direction:column;gap:12px}
+.card li{font-size:1.02rem;color:#222222;padding-left:20px;position:relative}
+.card li::before{content:"✦";position:absolute;left:0;color:#555555}
+.card .ptiers{border-top:2px solid var(--ink);padding-top:18px;margin-bottom:18px;display:flex;flex-direction:column;gap:7px}
+.card .ptiers .pr{display:flex;justify-content:space-between;font-size:.95rem;color:#222222}
 .card .ptiers .pr strong{font-family:var(--disp);font-weight:600}
-.card .note{font-size:.8rem;color:#6a6a6a;font-style:italic;margin-bottom:18px}
-.card .incl{font-size:.86rem;font-weight:600;color:#3d3d3d;margin-bottom:18px}
-.card .btn{margin-top:auto;text-align:center}
+.card .note{font-size:.8rem;color:#444444;font-style:italic;margin-bottom:18px}
+.card .incl{font-size:.86rem;font-weight:600;color:#222222;margin-bottom:18px}
+.card .btn{margin-top:auto;text-align:center;font-size:1.05rem;padding:17px 30px}
+.card-call{display:block;text-align:center;margin-top:12px;font-family:var(--disp);font-weight:500;font-size:.92rem;color:#222222;text-transform:uppercase;letter-spacing:.03em}
+.card-call:hover{text-decoration:underline;text-underline-offset:3px}
 .disclaim{text-align:center;color:var(--muted);font-size:.9rem;margin-top:34px}
+.addons{margin-top:54px;text-align:center}
+.addons h3{font-size:clamp(1.8rem,4vw,2.4rem);color:var(--paper)}
+.addons .ah-sub{color:var(--light);font-weight:300;margin:8px 0 26px}
+.addon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:840px;margin:0 auto}
+.addon{background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:14px;padding:22px 18px;display:flex;flex-direction:column;gap:8px;box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.addon .an{font-family:var(--disp);font-weight:600;text-transform:uppercase;font-size:1rem;letter-spacing:.02em}
+.addon .ap{font-family:var(--disp);font-weight:700;font-size:1.6rem}
 
 /* gallery */
 .ga{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto}
@@ -182,6 +189,7 @@ form.quote button{width:100%;margin-top:6px}
 /* footer */
 footer{background:var(--paper);color:var(--ink);padding:60px 28px 40px;text-align:center}
 footer .squiggle{margin:0 auto 26px;width:280px}
+.foot-logo{height:54px;width:auto;margin:0 auto 20px}
 footer .squiggle path{stroke:var(--ink)}
 footer h3{font-size:clamp(1.8rem,5vw,2.6rem);color:var(--ink);margin-bottom:18px}
 .socials{display:flex;gap:16px;justify-content:center;margin:22px 0 26px}
@@ -199,13 +207,11 @@ footer h3{font-size:clamp(1.8rem,5vw,2.6rem);color:var(--ink);margin-bottom:18px
 @media(max-width:860px){
   nav.desktop,.head-cta .btn{display:none}
   .hamburger{display:flex}
-  .logo-mark{width:44px}
-  .lw1{font-size:.95rem}
-  .lw2{font-size:.52rem}
+  .brand-logo{height:42px}
   .twocol,.contact-grid{grid-template-columns:1fr;gap:34px}
   .contact-grid .c-info{order:2}
   .photo-frame{transform:rotate(-1deg);max-width:420px;margin:0 auto}
-  .features,.cards{grid-template-columns:1fr}
+  .features,.cards,.addon-grid{grid-template-columns:1fr}
   .tiles{grid-template-columns:1fr 1fr}
   .row-2{grid-template-columns:1fr}
   .mtrack{font-size:1.3rem}
