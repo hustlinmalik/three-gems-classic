@@ -139,10 +139,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   qForm.addEventListener('submit',async(e)=>{
     e.preventDefault();
     const data=Object.fromEntries(new FormData(qForm));
-    if(!(data.phone||'').trim() && !(data.email||'').trim()){
+    const phone=(data.phone||'').trim();
+    const email=(data.email||'').trim();
+    if(!phone && !email){
       status.textContent='Please provide a phone number or email so we can reach you.';
       status.className='form-status show err';
       document.getElementById('phone').focus();return;
+    }
+    if(phone){
+      const digits=phone.replace(/\D/g,'');
+      if(digits.length<10 || digits.length>15){
+        status.textContent='Please enter a valid phone number (at least 10 digits).';
+        status.className='form-status show err';
+        document.getElementById('phone').focus();return;
+      }
+    }
+    if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      status.textContent='Please enter a valid email address (e.g. you@email.com).';
+      status.className='form-status show err';
+      document.getElementById('email').focus();return;
     }
     btn.disabled=true;btn.textContent='Sending…';status.className='form-status';
     try{
