@@ -285,7 +285,7 @@ footer h3 .foot-tag{display:block;font-family:var(--disp);font-weight:600;font-s
   .twocol,.contact-grid{grid-template-columns:1fr;gap:34px}
   .contact-grid .c-info{order:2}
   .photo-frame{transform:rotate(-1deg);max-width:420px;margin:0 auto}
-  .features,.features.features-2,.cards,.cards.cards-4,.addon-grid{grid-template-columns:1fr}
+  .features,.features.features-2,.cards,.cards.cards-2,.cards.cards-4,.addon-grid{grid-template-columns:1fr}
   .timeline::before{left:27px}
   .tl-node{width:58px;height:58px;font-size:1.4rem}
   .tl-phase{padding-left:80px}
